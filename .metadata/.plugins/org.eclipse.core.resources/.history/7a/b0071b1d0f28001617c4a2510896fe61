@@ -1,0 +1,68 @@
+package udacity;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class Reader {
+	Map<String, Integer>district = new HashMap<String, Integer>();
+	String workingDirectory="C:/Users/admin/Downloads/Taxi/season_1/";
+	public void Destination() throws FileNotFoundException{
+		 Scanner scanner = new Scanner(new File(workingDirectory+"training_data/cluster_map/cluster_map"));
+	        while (scanner.hasNext()) {
+	            String[] s = StringUtils.split(scanner.nextLine());
+	            district.put(s[0], Integer.parseInt(s[1]));
+	        }
+
+	        // checking if reading happened correctly
+	        for (Map.Entry<String, Integer> entry : district.entrySet())
+	            System.out.println("hash_district=" + entry.getKey() + ", district_id=" + entry.getValue());
+	        System.out.println("Number of Districts in analysis:" + district.size());
+
+	        scanner.close();
+	}
+	public void Order() throws FileNotFoundException, ParseException{
+		 String startdate ="2016-01-01";
+		 String enddate="2016-01-21";
+		 SimpleDateFormat dformat = new SimpleDateFormat("yyyy-MM-dd");
+		 Date strcounter = dformat.parse(startdate);
+		 Date endlimit =dformat.parse(enddate);
+		 while(strcounter.getTime() <= endlimit.getTime()){
+			Scanner scanner = new Scanner(new File(workingDirectory+"training_data/order_data/order_data_"+dformat.format(strcounter)));
+	        while (scanner.hasNext()) {
+	            String[] s = StringUtils.split(scanner.nextLine());
+	          //  district.put(s[0], Integer.parseInt(s[1]));
+	        }
+	       scanner.close();
+	       strcounter = addDays(strcounter, 1);   
+	       System.out.println(strcounter.toString());
+		 }
+	}
+	public static Date addDays(Date date, int days) {
+        GregorianCalendar cal = new GregorianCalendar();
+        cal.setTime(date);
+        cal.add(Calendar.DATE, days);
+                 
+        return cal.getTime();
+    }
+	 public static Date subtractDays(Date date, int days) {
+	        GregorianCalendar cal = new GregorianCalendar();
+	        cal.setTime(date);
+	        cal.add(Calendar.DATE, -days);
+	                 
+	        return cal.getTime();
+	    }
+	public void DataReader() throws FileNotFoundException, ParseException {
+        Destination();
+        Order();
+	}
+}

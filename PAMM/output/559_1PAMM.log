@@ -1,0 +1,181 @@
+
+Gurobi 6.0.4 (win64) logging started 10/07/15 16:55:38
+
+Server capacity available on gurobi-preprod.phx.gapinc.dev - running now
+Optimize a model with 4692 rows, 2892 columns and 13390 nonzeros
+Coefficient statistics:
+  Matrix range    [2e-02, 1e+06]
+  Objective range [6e+00, 1e+01]
+  Bounds range    [9e-02, 1e+06]
+  RHS range       [1e-04, 1e+06]
+Sparsify removed 6323 nonzeros (65%)
+Presolve removed 4272 rows and 3024 columns
+Presolve time: 0.16s
+Presolved: 420 rows, 253 columns, 3220 nonzeros
+Variable types: 79 continuous, 174 integer (174 binary)
+Found heuristic solution: objective 26506.272491
+Presolve removed 272 rows and 28 columns
+Presolved: 148 rows, 225 columns, 1836 nonzeros
+
+
+Root relaxation: objective 2.652404e+04, 38 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 26524.0370    0    1 26506.2725 26524.0370  0.07%     -    0s
+H    0     0                    26506.985272 26524.0370  0.06%     -    0s
+H    0     0                    26508.929462 26524.0370  0.06%     -    0s
+
+Cutting planes:
+  Flow cover: 1
+
+Explored 0 nodes (38 simplex iterations) in 0.20 seconds
+Thread count was 4 (of 4 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.650892946213e+04, best bound 2.650892946213e+04, gap 0.0%
+
+Gurobi 6.0.4 (win64) logging started 10/07/15 16:56:47
+
+Server capacity available on gurobi-preprod.phx.gapinc.dev - running now
+Optimize a model with 4692 rows, 2892 columns and 13390 nonzeros
+Coefficient statistics:
+  Matrix range    [2e-02, 1e+06]
+  Objective range [6e+00, 1e+01]
+  Bounds range    [9e-02, 1e+06]
+  RHS range       [1e-04, 1e+06]
+Sparsify removed 6323 nonzeros (65%)
+Presolve removed 4272 rows and 3024 columns
+Presolve time: 0.16s
+Presolved: 420 rows, 253 columns, 3220 nonzeros
+Variable types: 79 continuous, 174 integer (174 binary)
+Found heuristic solution: objective 26506.272491
+Presolve removed 272 rows and 28 columns
+Presolved: 148 rows, 225 columns, 1836 nonzeros
+
+
+Root relaxation: objective 2.652404e+04, 38 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 26524.0370    0    1 26506.2725 26524.0370  0.07%     -    0s
+H    0     0                    26506.985272 26524.0370  0.06%     -    0s
+H    0     0                    26508.929462 26524.0370  0.06%     -    0s
+
+Cutting planes:
+  Flow cover: 1
+
+Explored 0 nodes (38 simplex iterations) in 0.20 seconds
+Thread count was 4 (of 4 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.650892946213e+04, best bound 2.650892946213e+04, gap 0.0%
+
+Gurobi 6.0.4 (win64) logging started 10/07/15 16:58:59
+
+Server capacity available on gurobi-preprod.phx.gapinc.dev - running now
+Optimize a model with 4692 rows, 2892 columns and 13390 nonzeros
+Coefficient statistics:
+  Matrix range    [2e-02, 1e+06]
+  Objective range [6e+00, 1e+01]
+  Bounds range    [9e-02, 1e+06]
+  RHS range       [1e-04, 1e+06]
+Sparsify removed 6323 nonzeros (65%)
+Presolve removed 4272 rows and 3024 columns
+Presolve time: 0.18s
+Presolved: 420 rows, 253 columns, 3220 nonzeros
+Variable types: 79 continuous, 174 integer (174 binary)
+Found heuristic solution: objective 26506.272491
+Presolve removed 272 rows and 28 columns
+Presolved: 148 rows, 225 columns, 1836 nonzeros
+
+
+Root relaxation: objective 2.652404e+04, 38 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 26524.0370    0    1 26506.2725 26524.0370  0.07%     -    0s
+H    0     0                    26506.985272 26524.0370  0.06%     -    0s
+H    0     0                    26508.929462 26524.0370  0.06%     -    0s
+
+Cutting planes:
+  Flow cover: 1
+
+Explored 0 nodes (38 simplex iterations) in 0.21 seconds
+Thread count was 4 (of 4 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.650892946213e+04, best bound 2.650892946213e+04, gap 0.0%
+
+Gurobi 6.0.4 (win64) logging started 10/07/15 17:06:13
+
+Server capacity available on gurobi-preprod.phx.gapinc.dev - running now
+Optimize a model with 4692 rows, 2892 columns and 13390 nonzeros
+Coefficient statistics:
+  Matrix range    [2e-02, 1e+06]
+  Objective range [6e+00, 1e+01]
+  Bounds range    [9e-02, 1e+06]
+  RHS range       [1e-04, 1e+06]
+Sparsify removed 6323 nonzeros (65%)
+Presolve removed 4272 rows and 3024 columns
+Presolve time: 0.16s
+Presolved: 420 rows, 253 columns, 3220 nonzeros
+Variable types: 79 continuous, 174 integer (174 binary)
+Found heuristic solution: objective 26506.272491
+Presolve removed 272 rows and 28 columns
+Presolved: 148 rows, 225 columns, 1836 nonzeros
+
+
+Root relaxation: objective 2.652404e+04, 38 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 26524.0370    0    1 26506.2725 26524.0370  0.07%     -    0s
+H    0     0                    26506.985272 26524.0370  0.06%     -    0s
+H    0     0                    26508.929462 26524.0370  0.06%     -    0s
+
+Cutting planes:
+  Flow cover: 1
+
+Explored 0 nodes (38 simplex iterations) in 0.20 seconds
+Thread count was 4 (of 4 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.650892946213e+04, best bound 2.650892946213e+04, gap 0.0%
+
+Gurobi 6.0.4 (win64) logging started 10/07/15 17:12:08
+
+Server capacity available on gurobi-preprod.phx.gapinc.dev - running now
+Optimize a model with 4691 rows, 2892 columns and 13389 nonzeros
+Coefficient statistics:
+  Matrix range    [2e-02, 1e+06]
+  Objective range [6e+00, 1e+08]
+  Bounds range    [9e-02, 1e+06]
+  RHS range       [1e-04, 1e+06]
+Sparsify removed 6448 nonzeros (66%)
+Presolve removed 4267 rows and 3012 columns
+Presolve time: 0.15s
+Presolved: 424 rows, 264 columns, 3265 nonzeros
+Variable types: 85 continuous, 179 integer (179 binary)
+Found heuristic solution: objective 16858.703086
+Found heuristic solution: objective 17904.603323
+Presolve removed 270 rows and 31 columns
+Presolved: 154 rows, 233 columns, 1906 nonzeros
+
+
+Root relaxation: objective 2.650764e+04, 41 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    26507.637525 26507.6375  0.00%     -    0s
+
+Explored 0 nodes (41 simplex iterations) in 0.19 seconds
+Thread count was 4 (of 4 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.650763752458e+04, best bound 2.650763752458e+04, gap 0.0%

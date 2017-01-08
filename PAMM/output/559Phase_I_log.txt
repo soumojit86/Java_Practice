@@ -1,0 +1,5 @@
+The slack constraints summation after first pass would be0.0936625740618063
+Lower Bound Slack for period 4:0.0936625740618063
+Upper Bound Slack for period 4:0.0
+Lower Bound for Period 4:0.5533374
+Upper Bound for Period 4:0.75699997

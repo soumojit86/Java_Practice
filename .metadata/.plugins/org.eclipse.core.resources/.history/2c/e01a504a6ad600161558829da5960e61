@@ -1,0 +1,33 @@
+package pie;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class ProgressPie {
+
+	public static void main(String[] args) throws IOException {
+		int result=0;
+		Scanner scanner = new Scanner(new File("C:/Users/admin/Downloads/Java_Practice/ProgressPie/progress_pie_example_input.txt"));
+		FileWriter writer = new FileWriter( "C:/Users/admin/Downloads/Java_Practice/ProgressPie/B.txt");
+		int T=Integer.parseInt(scanner.nextLine());
+        for(int i=1;i<=T;i++){
+        	 String[] scan = StringUtils.split(scanner.nextLine());
+			 int P=Integer.parseInt(scan[0]);
+			 int X=Integer.parseInt(scan[1]);
+			 int Y=Integer.parseInt(scan[2]);
+			System.out.println("Value of P:"+P);
+			System.out.println("Value of X:"+X);
+			System.out.println("Value of Y:"+Y);
+        	writer.append("Case #"+i+": "+result);
+        	writer.append("\n");
+        }
+        scanner.close();
+        writer.close();
+
+	}
+
+}

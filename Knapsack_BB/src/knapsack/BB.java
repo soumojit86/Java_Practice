@@ -1,6 +1,16 @@
 package knapsack;
 
+/**  
+ * @Soumojit
+ */
+
+import java.io.File;
+import java.io.FileDescriptor;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
+
 
 public class BB {
  Reader r;
@@ -69,8 +79,21 @@ public class BB {
  }
  
  public void Write_Results(){
-	System.out.println("Knapsack content: "+solution); 
-	for(int i=0;i<final_choice.size();i++)
-		System.out.print(final_choice.get(i)+"\t");
+	 try {
+         File file_name = new File(Knapsack_BB.base+"/output/output_"+r.nitems+"_"+r.knapsize+".txt");
+         FileOutputStream fos = new FileOutputStream(file_name, true);
+         PrintStream ps = new PrintStream(fos);
+         System.setOut(ps);
+     }
+     catch(FileNotFoundException e) {
+         System.out.println("Problem with output file");
+     }
+	System.out.println("\n\nKnapsack content by B&B method (true optimal): "+solution); 
+	for(int i=0;i<final_choice.size();i++){
+		if(final_choice.get(i)==1)
+			System.out.print(r.Items.get(i).getId()+"\t");
+	}
+	System.out.println("\n");
+	System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
 	}
 }

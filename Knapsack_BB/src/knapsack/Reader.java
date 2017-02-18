@@ -1,5 +1,10 @@
 package knapsack;
 
+/**  
+ * @Soumojit
+ */
+
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -16,7 +21,8 @@ public class Reader {
 	public void Data_Reader(){
 		
       try {
-	    Scanner	scanner = new Scanner(new File("C:/Users/Soumoku/Downloads/Language_Practice/Tutorial Videos/Discrete Optimization/Assignments/knapsack/data/ks_30_0"));
+       Output_Folder_Creation();
+	   Scanner	scanner = new Scanner(new File(Knapsack_BB.base+"/data/ks_19_0"));
 		 String[] f1 = scanner.next().split(" ");
 		 nitems=Integer.parseInt(f1[0].trim());
 		 String[] f2 = scanner.next().split(" ");
@@ -24,9 +30,9 @@ public class Reader {
 	    int i=1;
 		 while (scanner.hasNext()) {
 	            String[] s1 = scanner.next().split(" ");
-	            int t1=Integer.parseInt(s1[0].trim());
+	            float t1=Float.parseFloat(s1[0].trim());
 	            String[] s2 = scanner.next().split(" ");
-	            int t2=Integer.parseInt(s2[0].trim());
+	            float t2=Float.parseFloat(s2[0].trim());
 	          Item itm= new Item(t1,t2);
 	          itm.setId(i);
                Items.add(itm);
@@ -34,7 +40,6 @@ public class Reader {
 	        }
 	        scanner.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
       Collections.sort(Items, new Comparator<Item>() {
@@ -49,5 +54,21 @@ public class Reader {
       for(int i=0;i<Items.size();i++){
       	System.out.println(Items.get(i).id+"\t"+Items.get(i).value+"\t"+Items.get(i).weight+"\t"+Items.get(i).ratio);
   	}
-	    }
+ }
+	public void Output_Folder_Creation(){
+		File theDir = new File("output");
+		if (!theDir.exists()) {
+		    boolean result = false;
+		    try{
+		        theDir.mkdir();
+		        result = true;
+		    } 
+		    catch(SecurityException se){
+		    	se.printStackTrace();
+		    }        
+		    if(result) {    
+		        System.out.println("DIR created");  
+		    }
+		}
+	}
 }

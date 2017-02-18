@@ -1,0 +1,12 @@
+
+Optimal list of items to include in knapsack by Genetic Algorithm Approach: 
+	17	19	21	32	39	2	6	3	15	1	23	25
+Weight incurred: 4992.0
+Value gained: 5332.0
+Time Taken for running Genetic Algorithm: 0.601
+
+
+Knapsack content by B&B method (true optimal): 5345.0
+17	19	21	32	39	2	3	15	1	23	35	26	
+
+Time Taken for running Branch & Bound: 2.218

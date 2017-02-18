@@ -21,8 +21,9 @@ public class Reader {
 	public void Data_Reader(){
 		
       try {
-       Output_Folder_Creation();
-	   Scanner	scanner = new Scanner(new File(Knapsack_BB.base+"/data/ks_19_0"));
+       Output_Folder_Creation("output");
+       Output_Folder_Creation("graphs");
+	   Scanner	scanner = new Scanner(new File(Knapsack_BB.base+"/data/ks_1000_0"));
 		 String[] f1 = scanner.next().split(" ");
 		 nitems=Integer.parseInt(f1[0].trim());
 		 String[] f2 = scanner.next().split(" ");
@@ -55,8 +56,8 @@ public class Reader {
       	System.out.println(Items.get(i).id+"\t"+Items.get(i).value+"\t"+Items.get(i).weight+"\t"+Items.get(i).ratio);
   	}
  }
-	public void Output_Folder_Creation(){
-		File theDir = new File("output");
+	public void Output_Folder_Creation(String h){
+		File theDir = new File(h);
 		if (!theDir.exists()) {
 		    boolean result = false;
 		    try{

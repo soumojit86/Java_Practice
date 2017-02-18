@@ -1,4 +1,7 @@
 package knapsack;
+/**  
+ * @Soumojit
+ */
 
 public class Greedy {
 	Reader r;

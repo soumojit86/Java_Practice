@@ -1,14 +1,15 @@
 package knapsack;
 
+/**  
+ * @Soumojit
+ */
+
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-/**  
- * @Soumojit
- */
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class Knapsack_BB {
 		 r.Data_Reader();
 		 Knapsack_GA knap = new Knapsack_GA(r);
 		 knap.Work();
-		 Plot graph = new Plot(knap.mean_fitness_of_generation,"Mean Fitness by Generation");
+		 Plot graph = new Plot(knap.mean_fitness_of_generation,"Mean Fitness by Generation",r);
 		 graph.Draw();
 		 Console_File(r);
 		 double estimatedTime= (double)System.currentTimeMillis()-(double)startTime;

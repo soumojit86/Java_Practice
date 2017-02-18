@@ -1,4 +1,7 @@
 package knapsack;
+/**  
+ * @Soumojit
+ */
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -6,9 +9,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-/**  
- * @Soumojit
- */
 
 
 import java.lang.StringBuilder;
@@ -210,7 +210,7 @@ public class Knapsack_GA {
     }
 
     void stopCriterion() {
-      Plot graph = new Plot(mean_fitness_of_generation,"Mean Fitness by Generation");
+      Plot graph = new Plot(mean_fitness_of_generation,"Mean Fitness by Generation",r);
       graph.Draw();
     }
 

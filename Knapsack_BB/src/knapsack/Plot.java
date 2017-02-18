@@ -12,8 +12,11 @@ import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Stroke;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -30,17 +33,19 @@ public class Plot extends JPanel {
     private static final Stroke GRAPH_STROKE = new BasicStroke(2f);
     private String graph_title = "";
     private ArrayList<Float> data_points;
+    private Reader r;
 
 
 
     /**
      * Default constructor
      */
-    public Plot(ArrayList<Float> data_points, String graph_title) {
+    public Plot(ArrayList<Float> data_points, String graph_title,Reader r) {
 
         // Set data points data set and graph title
         this.data_points = data_points;
         this.graph_title = graph_title;
+        this.r=r;
 
     }
     public void Draw (){
@@ -58,10 +63,18 @@ public class Plot extends JPanel {
     frame.pack();
     frame.setLocationRelativeTo(null);
     frame.setVisible(true);
-   /* BufferedImage image = new BufferedImage(frame.getWidth(), frame.getHeight(), BufferedImage.TYPE_INT_RGB); 
-    Graphics2D graphics2D = image.createGraphics(); 
-    frame.panel.paint(graphics2D); 
-    ImageIO.write(image,"png", new File("image.png")); */
+    try
+    {
+        BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
+        Graphics2D graphics2D = image.createGraphics();
+        frame.paint(graphics2D);
+        ImageIO.write(image,"jpeg", new File(Knapsack_BB.base+"/graphs/output_"+r.nitems+"_"+r.knapsize+".jpeg"));
+    }
+    catch(Exception exception)
+    {
+        exception.printStackTrace();
+    }
+    
 }
 
     /**

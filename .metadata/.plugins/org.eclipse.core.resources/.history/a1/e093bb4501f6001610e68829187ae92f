@@ -1,0 +1,75 @@
+package knapsack;
+
+/**  
+ * @Soumojit
+ */
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class Reader {
+	int nitems=0, knapsize=0;
+	ArrayList<Item> Items= new ArrayList<Item>();
+	public Reader(){
+		
+	}
+	public void Data_Reader(){
+		
+      try {
+       Output_Folder_Creation("output");
+       Output_Folder_Creation("graphs");
+	   Scanner	scanner = new Scanner(new File(Knapsack_BB.base+"/data/ks_19_0"));
+		 String[] f1 = scanner.next().split(" ");
+		 nitems=Integer.parseInt(f1[0].trim());
+		 String[] f2 = scanner.next().split(" ");
+		 knapsize=Integer.parseInt(f2[0].trim());
+	    int i=1;
+		 while (scanner.hasNext()) {
+	            String[] s1 = scanner.next().split(" ");
+	            float t1=Float.parseFloat(s1[0].trim());
+	            String[] s2 = scanner.next().split(" ");
+	            float t2=Float.parseFloat(s2[0].trim());
+	          Item itm= new Item(t1,t2);
+	          itm.setId(i);
+               Items.add(itm);
+               i++;
+	        }
+	        scanner.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+      Collections.sort(Items, new Comparator<Item>() {
+          @Override public int compare(Item p1, Item p2) {
+              return (int)(100000*(p2.ratio - p1.ratio)); // Descending
+          }
+
+      });
+      System.out.println("Size of Items: "+Items.size());
+      System.out.println("Size of Knapsack: "+knapsize);
+      System.out.println("Number of Items: "+nitems);
+      for(int i=0;i<Items.size();i++){
+      	System.out.println(Items.get(i).id+"\t"+Items.get(i).value+"\t"+Items.get(i).weight+"\t"+Items.get(i).ratio);
+  	}
+ }
+	public void Output_Folder_Creation(String h){
+		File theDir = new File(h);
+		if (!theDir.exists()) {
+		    boolean result = false;
+		    try{
+		        theDir.mkdir();
+		        result = true;
+		    } 
+		    catch(SecurityException se){
+		    	se.printStackTrace();
+		    }        
+		    if(result) {    
+		        System.out.println("DIR created");  
+		    }
+		}
+	}
+}
